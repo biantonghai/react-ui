@@ -1,9 +1,17 @@
 import { Component } from "react";
+import { Button, Toast } from "antd-mobile";
 
-export default class App extends Component{
-  render(){
+export default class App extends Component {
+  handleClick = () => {
+    Toast.info("提交成功");
+  };
+  render() {
     return (
-      <div></div>
-    )
+      <div>
+        <Button type="primary" onClick={this.handleClick}>
+          Start
+        </Button>
+      </div>
+    );
   }
 }
